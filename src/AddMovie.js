@@ -22,15 +22,10 @@ const AddMovie = () => {
             let index = prevMovies.findIndex(i => i.id == Id)
             if (index > -1) {
                 let movies = prevMovies.splice(index, 1, {name: name, price: price, id: Id})
-
                 return [...prevMovies]
             } else {
-                return [
-                    ...
-                        prevMovies, {name: name, price: price, id: movies.length + 1}
-                ]
+                return [... prevMovies, {name: name, price: price, id: movies.length + 1} ]
             }
-
         })
     }
 
